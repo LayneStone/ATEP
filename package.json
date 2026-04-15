@@ -1,0 +1,53 @@
+{
+  "name": "atep",
+  "version": "1.0.0",
+  "description": "单仓库分模块：Nostr 客户端/协议层、链上智能合约、索引存储、以及把三者串起来的整合服务。",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "test:quick": "tsx scripts/ultra-quick-test.ts",
+    "test:mock": "tsx scripts/mock-test.ts",
+    "test:nostr": "tsx docs/testing/tests/nostr-test.ts",
+    "test:indexer": "tsx docs/testing/tests/indexer-test.ts",
+    "test:cli": "tsx docs/testing/tests/cli-test.ts",
+    "test:integration": "tsx docs/testing/tests/integration-test.ts",
+    "test:e2e": "tsx docs/testing/tests/e2e-test.ts",
+    "test:suite": "tsx docs/testing/tests/test-suite.ts",
+    "test:critical": "tsx docs/testing/tests/test-suite.ts --critical",
+    "test:all": "tsx docs/testing/tests/test-suite.ts",
+    "quick-test": "./quick-test.sh",
+    "atep:cli": "tsx cli/src/cli.ts",
+    "atep:indexer:stream": "tsx indexer/src/stream-server.ts",
+    "dev:indexer": "tsx indexer/src/index.ts",
+    "dev:relay": "tsx nostr/src/local-test-relay.ts",
+    "dev:mock-indexer": "tsx scripts/mock-indexer.ts",
+    "build:optimized": "npm run build -- --optimize",
+    "dev:optimized": "npm run dev -- --optimize",
+    "test:performance": "tsx docs/testing/tests/performance-test.ts",
+    "analyze:bundle": "npx webpack-bundle-analyzer dist/bundle.js",
+    "benchmark": "tsx scripts/benchmark.ts",
+    "profile": "node --prof dist/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "type": "commonjs",
+  "dependencies": {
+    "@mysten/sui": "^2.15.0",
+    "@mysten/sui.js": "^0.55.0",
+    "@noble/hashes": "^2.0.1",
+    "@types/ws": "^8.18.1",
+    "commander": "^14.0.3",
+    "inquirer": "^13.3.2",
+    "js-sha3": "^0.9.3",
+    "nostr-tools": "^2.23.3",
+    "ws": "^8.20.0"
+  },
+  "devDependencies": {
+    "@types/inquirer": "^9.0.9",
+    "@types/node": "^25.5.0",
+    "@types/ws": "^8.18.1",
+    "tsx": "^4.21.0",
+    "typescript": "^5.9.3"
+  }
+}

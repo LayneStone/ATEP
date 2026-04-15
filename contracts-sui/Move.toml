@@ -1,0 +1,13 @@
+[package]
+name = "atep_contracts"
+edition = "2024.beta"
+
+[dependencies]
+Sui = { local = "/Users/shuaiqi/Downloads/sui-mainnet/crates/sui-framework/packages/sui-framework" }
+MoveStdlib = { local = "/Users/shuaiqi/Downloads/sui-mainnet/crates/sui-framework/packages/move-stdlib" }
+
+[addresses]
+atep_contracts = "0x0"
+
+[devnet.addresses]
+atep_contracts = "0x0"

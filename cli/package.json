@@ -1,0 +1,53 @@
+{
+  "name": "atep-cli",
+  "version": "1.0.0",
+  "description": "atep CLI - 任务管理工具和库",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "bin": {
+    "atep-cli": "./src/cli.ts"
+  },
+  "scripts": {
+    "start": "tsx src/cli.ts",
+    "dev": "tsx --watch src/cli.ts",
+    "build": "tsc",
+    "test": "tsx test-nostr.ts",
+    "test:websocket": "tsx test-websocket.ts",
+    "relay": "tsx local-relay.ts"
+  },
+  "keywords": [
+    "atep",
+    "cli",
+    "nostr",
+    "sui",
+    "blockchain",
+    "task-exchange"
+  ],
+  "author": "atep Team",
+  "license": "MIT",
+  "dependencies": {
+    "commander": "^11.0.0",
+    "inquirer": "^9.2.0",
+    "js-sha3": "^0.9.1",
+    "nostr-tools": "^2.0.0",
+    "ws": "^8.14.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "@types/inquirer": "^9.0.0",
+    "@types/ws": "^8.5.0",
+    "tsx": "^4.0.0",
+    "typescript": "^5.0.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/your-org/atep.git"
+  },
+  "bugs": {
+    "url": "https://github.com/your-org/atep/issues"
+  },
+  "homepage": "https://github.com/your-org/atep#readme"
+}
